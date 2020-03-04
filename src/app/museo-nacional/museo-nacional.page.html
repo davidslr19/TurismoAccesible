@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Museo Nacional</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <div *ngFor="let expo of exposiciones">
+  <h2>{{expo.title}}</h2>
+  <ion-img ></ion-img>
+
+  </div> -->
+  <ion-card *ngFor="let expo of exposiciones">
+    <img src="{{expo.image}}" alt="{{expo.textoAlternativo}}" />
+    <ion-card-header>
+      <ion-card-title>{{expo.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{expo.description}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-footer>
+    <div class="">
+      <p class=""><span>&copy;&nbsp;2020 Turismo Accesible</span>.</p>
+      <ul>
+        <li style="display:inline;"><ion-icon name="logo-facebook"></ion-icon><span>&nbsp;&nbsp;</span></li>
+        <li style="display:inline;"><ion-icon name="logo-twitter"></ion-icon><span>&nbsp;&nbsp;</span></li>
+        <li style="display:inline;"><ion-icon name="logo-googleplus"></ion-icon><span>&nbsp;&nbsp;</span></li>
+        <li style="display:inline;"><ion-icon name="logo-vimeo"></ion-icon><span>&nbsp;&nbsp;</span></li>
+        <li style="display:inline;"><ion-icon name="logo-youtube"></ion-icon><span>&nbsp;&nbsp;</span></li>
+        <li style="display:inline;"><ion-icon name="logo-pinterest"></ion-icon><span>&nbsp;&nbsp;</span></li>
+      </ul>
+    </div>
+</ion-footer>
+<!--  <ion-tabs>
+     <ion-tab tab="museo-nacional-piso1" component="museo-nacional-piso1">
+      <ion-nav></ion-nav>
+    </ion-tab> -->
+
+    <!-- <ngb-tabset activeId="tab-2" justify="justified" type="pills" (tabChange)="beforeChange($event)"
+    #myTabSet="ngbTabset">
+    <ngb-tab title="Tab One" id="tab-1">
+      <ng-template ngbTabContent>
+        <p>Tab one content here</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Tab Two" id="tab-2">
+      <ng-template ngbTabContent>
+        <p>Tab two content here</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Tab Three" id="tab-3">
+      <ng-template ngbTabContent>
+        <p>Tab three content here</p>
+      </ng-template>
+    </ngb-tab>
+ 
+  </ngb-tabset> -->
+
+
+    <!-- <ion-tab-bar slot="bottom" >
+      <ion-tab-button tab="/tabs/piso1">
+        <ion-icon name="camera"></ion-icon>
+        <ion-label>Piso 1</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="/tabs/piso2">
+        <ion-icon name="brush"></ion-icon>
+        <ion-label>Piso 2</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="/tabs/piso3">
+        <ion-icon name="color-palette"></ion-icon>
+        <ion-label>Piso 3</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar> 
+  
+  </ion-tabs>-->
+</ion-content>
