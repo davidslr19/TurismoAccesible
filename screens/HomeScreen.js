@@ -42,7 +42,7 @@ export default class HomeScreen extends React.Component {
     static navigationOptions = {
         //To hide the ActionBar/NavigationBar
         header: null,
-        tabBarVisible: false,
+        tabBarVisible: true,
     };
 
     componentDidMount() {
