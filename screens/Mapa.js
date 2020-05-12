@@ -28,7 +28,7 @@ const buttonPadding = 70;
 //search will be used to request a route
 //Working on magnetometer function-Sean
 //get text to speech
-export default class MuseoNacional extends React.Component {
+export default class Mapa extends React.Component {
     //lazy and have two listeners so I can always get data easily
     state = {
         MagnetometerData: {},
@@ -69,41 +69,17 @@ export default class MuseoNacional extends React.Component {
     }
 
     _SobreNosotros = () => {
-        Speech.speak('Acaba de dirigirse a la pagina del Sobre nosotros');
+        //Speech.speak('Acaba de dirigirse a la pagina del Sobre nosotros');
         this.props.navigation.navigate(NavigationActions.navigate({
             routeName: 'SobreNosotrosStack'
         }))
 
     }
 
-    _Expo1 = () => {
+    _MuseoNacional = () => {
         //Speech.speak('Acaba de dirigirse a la pagina del Sobre nosotros');
         this.props.navigation.navigate(NavigationActions.navigate({
-            routeName: 'Expo1Stack'
-        }))
-
-    }
-
-    _Expo2 = () => {
-        //Speech.speak('Acaba de dirigirse a la pagina del Sobre nosotros');
-        this.props.navigation.navigate(NavigationActions.navigate({
-            routeName: 'Expo2Stack'
-        }))
-
-    }
-
-    _Mapa = () => {
-        //Speech.speak('Acaba de dirigirse a la pagina del Sobre nosotros');
-        this.props.navigation.navigate(NavigationActions.navigate({
-            routeName: 'MapaStack'
-        }))
-
-    }
-
-    _Presentacion = () => {
-        //Speech.speak('Acaba de dirigirse a la pagina del Sobre nosotros');
-        this.props.navigation.navigate(NavigationActions.navigate({
-            routeName: 'PresentacionStack'
+            routeName: 'MuseoNacionalStack'
         }))
 
     }
@@ -122,87 +98,87 @@ export default class MuseoNacional extends React.Component {
 
     render() {
         return (
-            <View style={{ flex: 4, flexDirection: 'column'}}>
-                <TouchableOpacity onPress={() => this._Expo1()} style={{
+            <View style={{ flex: 6 , flexDirection: 'column'}}>
+                <TouchableOpacity style={{
 
                     backgroundColor: '#ffffff',
                     alignItems: 'stretch',
                     position: 'relative',
                     justifyContent: 'center',
-                    height: '40%',
+                    height: '30%',
                     width: '100%',
                     padding: 5,
                 }}>
                     <Image
-                        source={require('./assets/Exposiciones/monolito.png')}
+                        source={require('./assets/Exposiciones/mapaSala3.png')}
                         style={{
                             width: '100%',
                             height: '75%'
                         }}
-                        accessibilityLabel='Laja con representación de figura humana  (antropomorfa)'
+                        accessibilityLabel='Texto alternativo mapa de la sala numero 3'
 
                     />
                     <Text style={{
                         color: 'black',
-                        fontSize: 16,
+                        fontSize: 20,
                         padding: 5,
                         textAlign: "center",
                         fontWeight:'bold'
                     }}>
-                        Laja con representación de figura humana
+                        Mapa de la sala 3
                     </Text>
 
 
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this._Expo2()} style={{
+                <TouchableOpacity style={{
 
                     backgroundColor: '#ffffff',
                     alignItems: 'stretch',
                     position: 'relative',
                     justifyContent: 'center',
-                    height: '40%',
+                    height: '30%',
                     width: '100%',
                     padding: 5,
                 }}>
                     <Image
-                        source={require('./assets/Exposiciones/CoronaSimonBolivar.png')}
+                        source={require('./assets/Exposiciones/salaPequeña.png')}
                         style={{
                             width: '100%',
-                            height: '75%'
+                            height: '40%'
                         }}
-                        accessibilityLabel='Guirnalda cívica ofrendada por el pueblo de Cuzco al Libertador Simón Bolívar'
+                        accessibilityLabel='Texto alternativo mapa sala pequeña'
 
                     />
                     <Text style={{
                         color: 'black',
-                        fontSize: 16,
+                        fontSize: 20,
                         padding: 5,
                         textAlign: "center",
                         fontWeight:'bold'
                     }}>
-                        Corona de Simon Bolivar
+                        Mapa sala pequeña
                     </Text>
 
 
                 </TouchableOpacity>
                 
                 <View style={{ flex: 2 , flexDirection: 'row'}}>
-                <TouchableOpacity onPress={() => this._Presentacion()} style={{
+                <TouchableOpacity onPress={() => this._MuseoNacional()} style={{
                     
                     backgroundColor: 'rgb(0,0,255)',
                     position: 'relative',
                     alignItems: 'center',
                     justifyContent: 'center',             //for center align
                     alignSelf: 'center', //for align to right
-                    height: '50%',
-                    width: '50%',
+                    height: '40%',
+                    width: '100%',
                 }}>
                     <Text style={{ color: 'white', fontSize: 16 }}>
-                        Inicio
+                        Museo Nacional
                     </Text>
 
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this._Mapa()} style={{
+                {/* <TouchableOpacity onPress={() => this._help()} style={{
                     
                     backgroundColor: 'rgb(255,0,0)',
                     position: 'relative',
@@ -210,14 +186,14 @@ export default class MuseoNacional extends React.Component {
                     justifyContent: 'center',             //for center align
                     alignSelf: 'center', //for align to right
                     bottom: 0,
-                    height: '50%',
+                    height: '100%',
                     width: '50%',
                 }}>
                     <Text style={{ color: 'white', fontSize: 16 }}>
-                        Mapa
+                        Help
                     </Text>
 
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 </View>
 
             </View>
